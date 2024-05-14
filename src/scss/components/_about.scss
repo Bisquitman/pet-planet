@@ -1,0 +1,94 @@
+@use "../media" as *;
+
+.about {
+  padding: 120px 0 280px;
+
+  @include laptop {
+    padding: 100px 0 255px;
+  }
+  @include tablet {
+    padding: 100px 0 180px;
+  }
+  @include mobile {
+    padding: 80px 0 122px;
+  }
+
+  // .about__container
+  &__container {
+  }
+  // .about__title
+  &__title {
+    margin-bottom: 32px;
+
+    @include laptop {
+      margin-bottom: 18px;
+    }
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
+  }
+  // .about__box
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    &::before {
+      content: "";
+      flex-basis: 50%;
+      display: block;
+      background-image: url("/img/about-cat.png");
+      background-image: image-set(
+        url("/img/about-cat.avif") type("image/avif") 1x,
+        url("/img/about-cat@2x.avif") type("image/avif") 2x,
+        url("/img/about-cat.webp") type("image/webp") 1x,
+        url("/img/about-cat@2x.webp") type("image/webp") 2x,
+        url("/img/about-cat.png") type("image/png") 1x,
+        url("/img/about-cat@2x.png") type("image/png") 2x
+      );
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      height: 496px;
+      transform: translateY(-18px);
+
+      @include laptop {
+        height: 319px;
+        transform: translateY(-14px);
+      }
+      @include tablet {
+        transform: translateY(0);
+        flex-basis: 319px;
+        height: auto;
+        width: 408px;
+      }
+      @include mobile {
+        flex-basis: 190px;
+        width: 256px;
+      }
+    }
+  }
+  // .about__content
+  &__content {
+    flex-basis: 50%;
+    padding: 10px 24px;
+
+    @include tablet {
+      padding: 10px 0;
+    }
+  }
+  // .about__text
+  &__text {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

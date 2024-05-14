@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Planet | Магазин товаров для животных</title>
+
+  <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+  <link rel="manifest" href="./favicons/site.webmanifest">
+  <link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="./favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="./favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <!-- favicons -->
+
+  <link rel="preload" href="/fonts/onest-v6-cyrillic_latin-regular.woff2" type="font/woff2" as="font" crossorigin>
+  <link rel="preload" href="/fonts/onest-v6-cyrillic_latin-700.woff2" type="font/woff2" as="font" crossorigin>
+  <link href="./scss/index.scss" rel="stylesheet">
+
+  <script src="index.js" type="module"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container">
+      <a href="./index.html"><img class="header__logo" src="./img/logo.svg" width="330" height="57" alt="Логотип компании PetPlanet"></a>
+    </div>
+  </header>
+
+  <main class="main">
+    <h1 class="visually-hidden">Pet Planet - Магазин товаров для животных</h1>
+
+    <section class="hero hero_store">
+      <div class="hero__container">
+        <h2 class="visually-hidden">Товары для твоих любимцев</h2>
+        <img class="hero__title" src="./img/title.svg" width="810" height="215" alt="Товары для твоих любимцев">
+
+        <p class="hero__text">Большой выбор домиков, лежанок и&nbsp;кормов для кошек и&nbsp;собак</p>
+      </div>
+    </section>
+
+    <section class="store">
+      <div class="store__container">
+        <div class="store__header">
+          <ul class="store__categories">
+            <li class="store__category-item"><button class="store__category-btn store__category-btn_active">Домики</button></li>
+            <li class="store__category-item"><button class="store__category-btn">Лежанки</button></li>
+            <li class="store__category-item"><button class="store__category-btn">Игрушки</button></li>
+            <li class="store__category-item"><button class="store__category-btn">Корма</button></li>
+          </ul>
+          <button class="store__cart-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 28 28">
+              <circle cx="18" cy="14" r="2" fill="currentColor" />
+              <circle cx="10" cy="14" r="2" fill="currentColor" />
+              <path fill="currentColor"
+                d="M23.287 10.453c-.782-.863-1.96-1.365-3.594-1.54v-.886a5.683 5.683 0 0 0-1.866-4.212 5.655 5.655 0 0 0-4.387-1.458c-2.788.268-5.133 2.963-5.133 5.88v.676c-1.634.175-2.812.677-3.594 1.54-1.131 1.26-1.096 2.94-.968 4.107l.817 6.498c.245 2.275 1.166 4.609 6.183 4.609h6.51c5.017 0 5.938-2.334 6.183-4.597l.817-6.522c.128-1.155.152-2.835-.968-4.095Zm-9.684-6.475a4.063 4.063 0 0 1 4.469 4.049v.816H9.928v-.606c0-2.077 1.715-4.072 3.675-4.259Zm-3.78 11.364h-.011a1.17 1.17 0 0 1-1.167-1.167 1.173 1.173 0 0 1 2.345 0 1.17 1.17 0 0 1-1.167 1.167Zm8.167 0h-.012a1.17 1.17 0 0 1-1.166-1.167 1.173 1.173 0 0 1 2.345 0 1.17 1.17 0 0 1-1.167 1.167Z" />
+            </svg>
+          </button>
+        </div>
+
+        <h2 class="store__title section-title">Каталог</h2>
+
+        <ul class="store__list">
+          <li class="store__item">
+            <article class="store__product product">
+              <img class="product__image" src="/img/product-1.jpg" alt="Скандинавский домик для собаки">
+
+              <h3 class="product__title">Скандинавский домик для собаки</h3>
+
+              <p class="product__price">5400&nbsp;₽</p>
+
+              <button class="product__btn-add-cart button">Заказать</button>
+            </article>
+          </li>
+          <li class="store__item">
+            <article class="store__product product">
+              <img class="product__image" src="/img/product-1.jpg" alt="Скандинавский домик для собаки">
+
+              <h3 class="product__title">Скандинавский домик для собаки</h3>
+
+              <p class="product__price">5400&nbsp;₽</p>
+
+              <button class="product__btn-add-cart button">Заказать</button>
+            </article>
+          </li>
+          <li class="store__item">
+            <article class="store__product product">
+              <img class="product__image" src="/img/product-1.jpg" alt="Скандинавский домик для собаки">
+
+              <h3 class="product__title">Скандинавский домик для собаки</h3>
+
+              <p class="product__price">5400&nbsp;₽</p>
+
+              <button class="product__btn-add-cart button">Заказать</button>
+            </article>
+          </li>
+          <li class="store__item">
+            <article class="store__product product">
+              <img class="product__image" src="/img/product-1.jpg" alt="Скандинавский домик для собаки">
+
+              <h3 class="product__title">Скандинавский домик для собаки</h3>
+
+              <p class="product__price">5400&nbsp;₽</p>
+
+              <button class="product__btn-add-cart button">Заказать</button>
+            </article>
+          </li>
+          <li class="store__item">
+            <article class="store__product product">
+              <img class="product__image" src="/img/product-1.jpg" alt="Скандинавский домик для собаки">
+
+              <h3 class="product__title">Скандинавский домик для собаки</h3>
+
+              <p class="product__price">5400&nbsp;₽</p>
+
+              <button class="product__btn-add-cart button">Заказать</button>
+            </article>
+          </li>
+          <li class="store__item">
+            <article class="store__product product">
+              <img class="product__image" src="/img/product-1.jpg" alt="Скандинавский домик для собаки">
+
+              <h3 class="product__title">Скандинавский домик для собаки</h3>
+
+              <p class="product__price">5400&nbsp;₽</p>
+
+              <button class="product__btn-add-cart button">Заказать</button>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <img class="footer__logo" src="./img/logo.svg" alt="Логотип компании PetPlanet">
+
+      <address class="footer__contacts">
+        <a class="footer__email footer__link" href="mailto:Petplanet@gmail.com">Petplanet@gmail.com</a>
+
+        <ul class="footer__list footer__list_contacts">
+          <li class="footer__item">
+            <a class="footer__link" href="https://t.me" target="_blank" rel="noopener noreferrer"
+              aria-label="Мы в Telegram" title="Мы в Telegram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32">
+                <path fill="currentColor"
+                  d="M16 3C8.824 3 3 8.824 3 16s5.824 13 13 13 13-5.824 13-13S23.176 3 16 3Zm6.032 8.84c-.195 2.054-1.04 7.046-1.469 9.347-.182.975-.546 1.3-.884 1.339-.754.065-1.326-.494-2.054-.975-1.144-.754-1.794-1.222-2.899-1.95-1.287-.845-.455-1.313.286-2.067.195-.195 3.523-3.224 3.588-3.497a.26.26 0 0 0-.065-.234c-.078-.065-.182-.039-.273-.026-.117.026-1.937 1.235-5.486 3.627-.52.351-.988.533-1.404.52-.468-.013-1.352-.26-2.015-.481-.819-.26-1.456-.403-1.404-.858.026-.234.351-.468.962-.715 3.796-1.651 6.318-2.743 7.579-3.263 3.614-1.508 4.355-1.768 4.849-1.768.104 0 .351.026.507.156.13.104.169.247.182.351-.013.078.013.312 0 .494Z" />
+              </svg>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="https://youtu.be" target="_blank" rel="noopener noreferrer"
+              aria-label="Мы на YouTube" title="Мы на YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32">
+                <path fill="currentColor"
+                  d="m13.333 20 6.92-4-6.92-4v8ZM28.747 9.56c.173.627.293 1.467.373 2.533.093 1.067.133 1.987.133 2.787l.08 1.12c0 2.92-.213 5.067-.586 6.44-.334 1.2-1.107 1.973-2.307 2.307-.627.173-1.774.293-3.534.373-1.733.093-3.32.133-4.786.133l-2.12.08c-5.587 0-9.067-.213-10.44-.586-1.2-.334-1.973-1.107-2.307-2.307-.173-.627-.293-1.467-.373-2.533a32.076 32.076 0 0 1-.133-2.787L2.667 16c0-2.92.213-5.067.586-6.44.333-1.2 1.107-1.973 2.307-2.307.627-.173 1.773-.293 3.533-.373a88.87 88.87 0 0 1 4.787-.133l2.12-.08c5.587 0 9.067.213 10.44.586 1.2.334 1.973 1.107 2.306 2.307Z" />
+              </svg>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="https://vk.com" target="_blank" rel="noopener noreferrer"
+              aria-label="Мы в VKontakte" title="Мы в VKontakte">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32">
+                <path fill="currentColor"
+                  d="M16 3C8.82 3 3 8.82 3 16s5.82 13 13 13 13-5.82 13-13S23.18 3 16 3Zm5 14.667s1.15 1.135 1.432 1.661c.008.011.013.022.015.028.115.193.142.344.085.456-.094.187-.42.279-.53.287H19.97c-.14 0-.436-.037-.793-.283-.275-.192-.546-.508-.81-.815-.394-.458-.735-.853-1.08-.853a.413.413 0 0 0-.128.02c-.26.084-.593.455-.593 1.444 0 .308-.244.486-.416.486h-.93c-.317 0-1.968-.111-3.43-1.654-1.79-1.889-3.402-5.678-3.415-5.713-.102-.245.108-.376.337-.376h2.051c.274 0 .363.166.426.314.073.172.34.856.781 1.625.714 1.254 1.151 1.763 1.502 1.763.066 0 .13-.018.188-.049.458-.254.372-1.886.352-2.225 0-.063-.001-.73-.236-1.05-.168-.23-.453-.319-.627-.351a.745.745 0 0 1 .27-.23c.314-.156.88-.18 1.442-.18h.313c.61.009.766.048.987.104.447.107.456.395.417 1.382-.012.28-.024.597-.024.971 0 .081-.004.168-.004.26-.014.503-.03 1.073.325 1.307.046.029.1.044.154.045.123 0 .494 0 1.5-1.724.31-.555.578-1.132.805-1.725.02-.036.08-.144.15-.186a.36.36 0 0 1 .168-.04h2.412c.263 0 .443.04.477.142.06.16-.011.652-1.112 2.143l-.492.649c-.998 1.308-.998 1.374.063 2.367Z" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </address>
+
+      <div class="footer__info">
+        <p class="footer__copyright">&copy;&nbsp;Petshop, 2024</p>
+
+        <p class="footer__text" hidden>Проект сделан в&nbsp;учебных целях</p>
+
+        <ul class="footer__list footer__list_info">
+          <li class="footer__item">Designer: <a class="footer__link" href="https://t.me/mrshmallowww" target="_blank"
+              rel="noopener noreferrer">Anastasia Ilina</a></li>
+          <li class="footer__item">Developer: <a class="footer__link" href="#" target="_blank"
+              rel="noopener noreferrer">Bisquitman</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

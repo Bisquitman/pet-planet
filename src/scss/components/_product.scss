@@ -1,0 +1,53 @@
+@use "../variables" as *;
+@use "../media" as *;
+
+.product {
+  border-radius: 24px;
+  padding: 16px;
+  background-color: $white;
+
+  // .product__image
+  &__image {
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    height: 229px;
+    margin-bottom: 32px;
+  }
+  // .product__title
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.4;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+  // .product__price
+  &__price {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.4;
+    text-align: center;
+    color: $green;
+    margin-bottom: 24px;
+  }
+  // .product__btn-add-cart
+  &__btn-add-cart {
+    background-color: $purple;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.4;
+    text-align: center;
+    color: $light;
+    width: 100%;
+
+    &:hover {
+      background-color: #981fd1;
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: 1px solid $carrot;
+    }
+  }
+}

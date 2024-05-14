@@ -1,0 +1,35 @@
+@use "../media" as *;
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 50px 0;
+  z-index: 50;
+
+  @include laptop {
+    padding: 40px 0;
+  }
+  @include tablet {
+    padding: 32px 0;
+  }
+  @include mobile {
+    padding: 22px 0;
+  }
+
+  // .header__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  // .header__logo
+  &__logo {
+    width: 330px;
+
+    @include tablet {
+      width: 200px;
+    }
+  }
+}

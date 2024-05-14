@@ -1,0 +1,250 @@
+@use "../variables" as *;
+@use "../media" as *;
+
+.advantages {
+  position: relative;
+  color: $light;
+
+  // .advantages__bg
+  &__bg {
+    padding: 100px 0;
+    background-color: $carrot;
+    background-image: url("/img/pattern.svg");
+    background-position: top center;
+    border-radius: 300px 300px 0 0;
+
+    @include laptop {
+      padding: 80px 0;
+      border-radius: 200px 200px 0 0;
+    }
+    @include tablet {
+      border-radius: 120px 120px 0 0;
+    }
+    @include mobile {
+      padding: 50px 0;
+      background-image: url("/img/pattern-mobile.svg");
+      border-radius: 80px 80px 0 0;
+    }
+  }
+  // .advantages__container
+  &__container {
+  }
+  // .advantages__title
+  &__title {
+    color: $light;
+    margin-bottom: 50px;
+
+    @include laptop {
+      margin-bottom: 32px;
+    }
+    @include tablet {
+    }
+    @include mobile {
+      margin-bottom: 24px;
+    }
+  }
+  // .advantages__list
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(292px, 1fr));
+    // grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    @include laptop {
+      gap: 20px;
+    }
+    @include tablet {
+      gap: 50px;
+    }
+    @include mobile {
+      gap: 32px;
+    }
+  }
+  // .advantages__item
+  &__item {
+    padding-top: 268px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: 256px;
+    background-position: top center;
+
+    @include laptop {
+      padding-top: 172px;
+      background-size: 160px;
+    }
+    @include mobile {
+      padding-top: 86px;
+      background-size: 80px;
+    }
+
+    &_1 {
+      background-image: url("/img/advantages-1.png");
+      background-image: image-set(
+        url("/img/advantages-1.avif") type("image/avif") 1x,
+        url("/img/advantages-1@2x.avif") type("image/avif") 2x,
+        url("/img/advantages-1.webp") type("image/webp") 1x,
+        url("/img/advantages-1@2x.webp") type("image/webp") 2x,
+        url("/img/advantages-1.png") type("image/png") 1x,
+        url("/img/advantages-1@2x.png") type("image/png") 2x
+      );
+    }
+    &_2 {
+      background-image: url("/img/advantages-2.png");
+      background-image: image-set(
+        url("/img/advantages-2.avif") type("image/avif") 1x,
+        url("/img/advantages-2@2x.avif") type("image/avif") 2x,
+        url("/img/advantages-2.webp") type("image/webp") 1x,
+        url("/img/advantages-2@2x.webp") type("image/webp") 2x,
+        url("/img/advantages-2.png") type("image/png") 1x,
+        url("/img/advantages-2@2x.png") type("image/png") 2x
+      );
+    }
+    &_3 {
+      background-image: url("/img/advantages-3.png");
+      background-image: image-set(
+        url("/img/advantages-3.avif") type("image/avif") 1x,
+        url("/img/advantages-3@2x.avif") type("image/avif") 2x,
+        url("/img/advantages-3.webp") type("image/webp") 1x,
+        url("/img/advantages-3@2x.webp") type("image/webp") 2x,
+        url("/img/advantages-3.png") type("image/png") 1x,
+        url("/img/advantages-3@2x.png") type("image/png") 2x
+      );
+    }
+  }
+  // .advantages__subtitle
+  &__subtitle {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 140%;
+    width: min-content;
+    margin: 0 auto 12px;
+
+    @include laptop {
+      font-size: 24px;
+    }
+    @include mobile {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+  }
+  // .advantages__text
+  &__text {
+  }
+  // .advantages__count-box
+  &__count-box {
+    position: absolute;
+    width: 306px;
+    height: 306px;
+    top: -115px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/img/star.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    text-align: center;
+
+    @include hires {
+      left: calc(50% - var(--container-width) / 2);
+      transform: translateX(-50%);
+    }
+
+    @include laptop {
+      top: -102px;
+      width: 256px;
+      height: 256px;
+    }
+    @include tablet {
+      width: 200px;
+      height: 200px;
+    }
+    @include mobile {
+      top: -73px;
+      width: 140px;
+      height: 140px;
+    }
+  }
+  // .advantages__count
+  &__count {
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 140%;
+    text-align: center;
+
+    @include laptop {
+      font-size: 44px;
+    }
+    @include tablet {
+      font-size: 32px;
+    }
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+  // .advantages__count-text
+  &__count-text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    max-width: 40%;
+
+    @include laptop {
+      font-size: 20px;
+    }
+    @include tablet {
+      max-width: 65%;
+    }
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 396px;
+    height: 682px;
+    top: -338px;
+    right: 0;
+    background-image: url("/img/advantages-bg-dog.png");
+    background-image: image-set(
+      url("/img/advantages-bg-dog.avif") type("image/avif") 1x,
+      url("/img/advantages-bg-dog@2x.avif") type("image/avif") 2x,
+      url("/img/advantages-bg-dog.webp") type("image/webp") 1x,
+      url("/img/advantages-bg-dog@2x.webp") type("image/webp") 2x,
+      url("/img/advantages-bg-dog.png") type("image/png") 1x,
+      url("/img/advantages-bg-dog@2x.png") type("image/png") 2x
+    );
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+
+    @include hires {
+      right: calc(50% - var(--container-width) / 2);
+      transform: translateX(50%);
+    }
+
+    @include laptop {
+      width: 272px;
+      height: 469px;
+      top: -242px;
+      right: 8px;
+    }
+    @include tablet {
+      width: 202px;
+      height: 348px;
+      top: -176px;
+      right: -25px;
+    }
+    @include mobile {
+      width: 100px;
+      height: 169px;
+      top: -82px;
+      right: 0;
+    }
+  }
+}

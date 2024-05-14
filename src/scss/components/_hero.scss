@@ -1,0 +1,142 @@
+@use "../variables" as *;
+@use "../media" as *;
+
+.hero {
+  padding: 218px 0 245px;
+  color: $light;
+  background-color: $purple;
+  background-image: url("/img/bg-dog.png"), url("/img/pattern.svg");
+  background-repeat: no-repeat, repeat;
+  background-size: contain, auto;
+  background-position: right bottom, center top;
+
+  @include hires {
+    background-image: url("/img/bg-dog-hires.png"), url("/img/pattern.svg");
+    background-position: left 48vw bottom 0, center top;
+    background-size: 1850px, auto;
+  }
+
+  @include laptop {
+    padding: 148px 0 172px;
+  }
+
+  @include tablet {
+    padding: 108px 0 460px;
+    background-image: url("/img/bg-dog-tablet.png"), url("/img/pattern.svg");
+    background-size: 655px 654px, auto;
+  }
+
+  @include mobile {
+    padding: 100px 0 284px;
+    background-image: url("/img/bg-dog-tablet.png"), url("/img/pattern-mobile.svg");
+    background-size: 294px 261px, auto;
+  }
+
+  &_store {
+    background-color: $green;
+    background-image: url("/img/bg-cat-store.png"), url("/img/pattern.svg");
+    background-size: 839px, auto;
+
+    // @include hires {
+    //   background-size: 1850px, auto;
+    // }
+
+    @include laptop {
+      background-size: 639px, auto;
+    }
+
+    @include tablet {
+      background-size: 100%, auto;
+    }
+  }
+
+  // .hero__container
+  &__container {
+  }
+  // .hero__title
+  &__title {
+    max-width: 100%;
+    width: 810px;
+    margin-bottom: 50px;
+
+    @include hires {
+      width: 950px;
+    }
+
+    @media (max-width: 1300px) {
+      width: 660px;
+    }
+
+    @include laptop {
+      width: 588px;
+      margin-bottom: 32px;
+    }
+    @include mobile {
+      margin-bottom: 16px;
+    }
+  }
+  // .hero__text
+  &__text {
+    max-width: 420px;
+    margin-bottom: 60px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include hires {
+      max-width: 32.307692%; /* 420/1300 */
+    }
+
+    @include laptop {
+      max-width: 360px;
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  // .hero__store-link
+  &__store-link {
+    background-color: $green;
+    color: $light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: max-content;
+    transition: background-color 0.2s;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='%23FDEEE3' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M4.7 4.7h6.6m0 0v6.6m0-6.6-6.6 6.6'/%3E%3C/svg%3E");
+    }
+
+    &:hover {
+      background-color: #00772f;
+    }
+
+    &:focus,
+    &:focus-visible {
+      background-color: $green;
+      outline: 1px solid $carrot;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+
+    @include laptop {
+      padding: 16px 36px;
+    }
+
+    @include mobile {
+      padding: 11px 24px;
+    }
+  }
+}
