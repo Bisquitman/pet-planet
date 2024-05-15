@@ -24,23 +24,8 @@ try {
   console.warn("Это не та страница...");
 }
 
-try {
-  const categoryBtns = document.querySelectorAll(".store__category-btn");
-
-  const changeActiveBtn = ({ target }) => {
-    categoryBtns.forEach((btn) => {
-      btn.classList.remove("store__category-btn_active");
-    });
-
-    target.classList.add("store__category-btn_active");
-  };
-
-  categoryBtns.forEach((btn) => {
-    btn.addEventListener("click", changeActiveBtn);
-  });
-} catch (error) {
-  console.error(error);
-}
+const categoryBtns = document.querySelectorAll(".store__category-btn");
+const storeTitle = document.querySelector(".store__title");
 
 const renderProductList = () => {
   const productList = document.querySelector(".store__list");
@@ -91,6 +76,21 @@ const renderProductList = () => {
   };
 
   fetchProductByCategory("Домики");
+
+  const changeActiveBtn = ({ target }) => {
+    categoryBtns.forEach((btn) => {
+      btn.classList.remove("store__category-btn_active");
+    });
+
+    target.classList.add("store__category-btn_active");
+
+    fetchProductByCategory(target.textContent);
+    storeTitle.textContent = target.textContent;
+  };
+  
+  categoryBtns.forEach((btn) => {
+    btn.addEventListener("click", changeActiveBtn);
+  });
 };
 
 renderProductList();
