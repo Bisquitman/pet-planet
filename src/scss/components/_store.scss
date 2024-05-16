@@ -70,10 +70,16 @@
     display: block;
     width: 28px;
     height: 28px;
+    flex-shrink: 0;
     transition: color 0.2s;
 
     &:hover {
       color: darken($carrot, 10%);
+    }
+
+    @include hires {
+      width: 32px;
+      height: 32px;
     }
   }
   // .store__cart-cnt
@@ -90,12 +96,15 @@
   &__cart-icon {
     position: absolute;
     inset: 0;
+    width: 100%;
+    height: 100%;
     z-index: 1;
   }
   // .store__title
   &__title {
     font-weight: 700;
     font-size: 52px;
+    line-height: 1.3;
     text-align: left;
     margin-bottom: 32px;
   }
