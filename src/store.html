@@ -28,7 +28,8 @@
 <body>
   <header class="header">
     <div class="header__container">
-      <a href="./index.html"><img class="header__logo" src="./img/logo.svg" width="330" height="57" alt="Логотип компании PetPlanet"></a>
+      <a href="./index.html"><img class="header__logo" src="./img/logo.svg" width="330" height="57"
+          alt="Логотип компании PetPlanet"></a>
     </div>
   </header>
 
@@ -48,14 +49,16 @@
       <div class="store__container">
         <nav class="store__header">
           <ul class="store__categories">
-            <li class="store__category-item"><button class="store__category-btn store__category-btn_active">Домики</button></li>
+            <li class="store__category-item"><button
+                class="store__category-btn store__category-btn_active">Домики</button></li>
             <li class="store__category-item"><button class="store__category-btn">Лежанки</button></li>
             <li class="store__category-item"><button class="store__category-btn">Игрушки</button></li>
             <li class="store__category-item"><button class="store__category-btn">Корма</button></li>
           </ul>
-          <button class="store__cart-btn">
+          <button class="store__cart-btn" aria-label="открыть корзину">
             <span class="store__cart-cnt">0</span>
-            <svg class="store__cart-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 28 28">
+            <svg class="store__cart-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none"
+              viewBox="0 0 28 28">
               <circle cx="18" cy="14" r="2" fill="currentColor" />
               <circle cx="10" cy="14" r="2" fill="currentColor" />
               <path fill="currentColor"
@@ -198,11 +201,46 @@
         <h2 class="modal__title">Корзина</h2>
 
         <ul class="modal__cart-items">
-          <li class="modal__cart-item"></li>
+          <!-- <li class="modal__cart-item">
+            <img class="modal__cart-item-image" src="img/product-1.jpg" alt="Домик-конус для питомцев">
+
+            <h3 class="modal__cart-item-title">Домик-конус для питомцев</h3>
+
+            <div class="modal__cart-item-counter">
+              <button class="modal__counter-btn modal__minus">-</button>
+              <span class="modal__count">1</span>
+              <button class="modal__counter-btn modal__plus">+</button>
+            </div>
+
+            <p class="modal__cart-item-price">5700&nbsp;₽</p>
+          </li> -->
         </ul>
+
+        <form class="modal__cart-form">
+          <fieldset class="modal__cart-fieldset">
+            <legend class="modal__cart-legend">Самовывоз из магазина:</legend>
+
+            <label class="modal__radio radio">ул. Адамавая 45/1
+              <input class="radio__input" type="radio" name="store" value="1" checked>
+            </label>
+
+            <label class="modal__radio radio">ул. Вишневая 74
+              <input class="radio__input" type="radio" name="store" value="2">
+            </label>
+
+            <label class="modal__radio radio">ул. Чехова 106/28
+              <input class="radio__input" type="radio" name="store" value="3">
+            </label>
+          </fieldset>
+
+          <div class="modal__cart-footer">
+            <button class="modal__cart-submit-btn button button_purple">Заказать</button>
+            <p class="modal__cart-total-price"><span>0</span>&nbsp;₽</p>
+          </div>
+        </form>
       </div>
     </div>
-    
+
     <button class="modal-overlay__close-btn">&times;</button>
   </div>
 </body>

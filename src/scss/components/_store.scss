@@ -15,11 +15,23 @@
     align-items: center;
     color: $carrot;
     margin-bottom: 40px;
+
+    @include mobile {
+      flex-wrap: wrap;
+      justify-content: end;
+      gap: 30px;
+    }
   }
   // .store__categories
   &__categories {
     display: flex;
     gap: 28px;
+    overflow-x: auto;
+
+    @include mobile {
+      flex-grow: 1;
+      gap: 16px;
+    }
   }
   // .store__category-item
   &__category-item {
@@ -81,6 +93,11 @@
       width: 32px;
       height: 32px;
     }
+
+    @include mobile {
+      width: 24px;
+      height: 24px;
+    }
   }
   // .store__cart-cnt
   &__cart-cnt {
@@ -90,7 +107,16 @@
     font-size: 12px;
     line-height: 1;
     text-align: center;
+    vertical-align: baseline;
     z-index: 2;
+
+    @include hires {
+      vertical-align: middle;
+    }
+
+    @include mobile {
+      vertical-align: bottom;
+    }
   }
   // .store__cart-icon
   &__cart-icon {
